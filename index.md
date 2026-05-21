@@ -8,6 +8,16 @@ layout: default
 
 This project focuses on building a small cybersecurity homelab to develop and strengthen my practical, hands-on skills. The main focus areas include network configuration and fundamentals, designing and managing an Active Directory environment, and integrating security monitoring and analysis tools such as Splunk within the domain.
 
+### Used software and hardware specifications
+
+*   Desktop running Windows 10 as OS, 2TB/64GB
+*   GNS3 & Oracle Virtualbox for virtualization
+*   Windows 2022 Server hosting DNS, DHCP and Active Directory
+*   2 x Windows 11 hosts
+*   Ubuntu 26.04 acting as server for SIEM
+*   SPLUNK
+*   pfSense
+
 ## Header 2
 
 > This is a blockquote following a header.
