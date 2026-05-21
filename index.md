@@ -18,6 +18,10 @@ This project focuses on building a small cybersecurity homelab to develop and st
 *   SPLUNK
 *   pfSense
 
+### Approach 
+
+The project was divided into phases. First phase was getting Windows server with DNS, DHCP and Active Directory up and running and connecting two hosts to the server to ensure that the services running on it are running properly. In the second phase, I added a pfSense firewall to get internet connection to the hosts in the network, added Ubuntu to act as a server for Splunk and configured Splunk forwarders on the Windows hosts. 
+
 ## Header 2
 
 > This is a blockquote following a header.
