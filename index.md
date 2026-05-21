@@ -10,7 +10,7 @@ This project focuses on building a small cybersecurity homelab to develop and st
 
 ### Used software and hardware specifications
 
-*   Desktop running Windows 10 as OS, 2TB/64GB
+*   Desktop running Windows 10 as OS, 2TB SSD/64GB RAM
 *   GNS3 & Oracle Virtualbox for virtualization
 *   Windows 2022 Server hosting DNS, DHCP and Active Directory
 *   2 x Windows 11 hosts
