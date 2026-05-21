@@ -6,7 +6,7 @@ layout: default
 
 # Creating a small homelab environment
 
-This is a small homelab I've done. The main focus of the lab is to get some practice with configuring Active Directory environment and Splunk. I decided to divide the project into three phases in a following manner
+This project focuses on building a small cybersecurity homelab to develop and strengthen my practical, hands-on skills. The main focus areas include network configuration and fundamentals, designing and managing an Active Directory environment, and integrating security monitoring and analysis tools such as Splunk within the domain.
 
 ## Header 2
 
