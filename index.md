@@ -32,7 +32,7 @@ Set up the domain controller first and after that joined both hosts to the netwo
 
 Testing connectivity to DC from Host 1 on a local user
 
-![Pinging DC](/images/pings.png)
+![Pinging DC](/images/pings.jpg)
 
 Hosts in Domain Controllers AD's users and computers
 
