@@ -28,6 +28,22 @@ The network I decided to use for the machines was 192.168.3.0/24. Domain Control
 
 ![Setting up DC and hosts](/images/Topology.png)
 
+Set up the domain controller first and after that joined both hosts to the network to test interconnectivity and local domain working properly. 
+
+Testing connectivity to DC from Host 1 on a local user
+
+![Pinging DC](/images/pings.png)
+
+Hosts in Domain Controllers AD's users and computers
+
+![Hosts](/images/computers.png)
+
+DHCP leases working as expected
+
+![DHCP-leashes](/images/leases.png)
+
+
+
 ### Header 3
 
 ```js
