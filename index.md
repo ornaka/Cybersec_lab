@@ -22,11 +22,11 @@ This project focuses on building a small cybersecurity homelab to develop and st
 
 The project was divided into phases. First phase was getting Windows server with DNS, DHCP and Active Directory up and running and connecting two hosts to the server to ensure that the services running on it are running properly. In the second phase, I added a pfSense firewall to get internet connection to the hosts in the network, added Ubuntu to act as a server for Splunk and configured Splunk forwarders on the Windows hosts to feed data to Splunk. 
 
-## Header 2
+### Phase 1 
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+The network I decided to use for the machines was 192.168.3.0/24. Domain Controller got a static IP address 192.168.3.20 and the two W11 hosts would get their domains as a DHCP leash. After setting the machines up into the GNS3 the network looked as follows: 
+
+![Setting up DC and hosts](/images/topology.png)
 
 ### Header 3
 
