@@ -26,7 +26,7 @@ The project was divided into phases. First phase was getting Windows server with
 
 The network I decided to use for the machines was 192.168.3.0/24. Domain Controller got a static IP address 192.168.3.20 and the two W11 hosts would get their domains as a DHCP leash. After setting the machines up into the GNS3 the network looked as follows: 
 
-![Setting up DC and hosts](/images/topology.png)
+![Setting up DC and hosts](/images/Topology.png)
 
 ### Header 3
 
