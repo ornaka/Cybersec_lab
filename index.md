@@ -42,7 +42,7 @@ DHCP leases working as expected
 
 ![DHCP-leashes](/images/leases.png)
 
-
+I also created two regular users and created organizational unit and group policy object for them. One domain-admin was created for administrative tasks that would come later when installing and configuring Splunk forwarders on hosts. 
 
 ### Header 3
 
