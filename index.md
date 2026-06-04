@@ -15,7 +15,7 @@ This project focuses on building a small cybersecurity homelab to develop and st
 *   Windows 2022 Server hosting DNS, DHCP and Active Directory
 *   2 x Windows 11 hosts
 *   Ubuntu 26.04 acting as server for SIEM
-*   SPLUNK
+*   SPLUNK, Splunk Universal Forwarders and Sysmon for security logs
 *   pfSense
 
 ### Approach 
@@ -54,7 +54,7 @@ First GPO I implemented was disabling access to CMD for regular users, since the
 
 ### Phase 2
 
-After getting the AD environment to a point where I was happy was time to implement pfSense FW and Splunk server to the lab. I decided to run Splunk on an Ubuntu 26.04 machine, which got a static IP address of 192.168.3.30 from DHCP server since I suspected that having a leashed DHCP address would mess up with configuration of Splunk Forwarders on the host machines. The server was also joined into the domain and implementing the changes topology looked like the following image.
+After getting the AD environment to a point where I was happy was time to implement pfSense FW and Splunk server to the lab. I decided to run Splunk on an Ubuntu 26.04 machine, which got a static IP address of 192.168.3.30 from DHCP server since I suspected that having a leashed DHCP address would mess up with configuration of Splunk Forwarders on the host machines. The server was also joined into the domain and implementing the changes topology looked like the following image. All of the machines also got an internet connection through the FW which was crucial for downloading Sysmon for security logs and Splunk Forwarders to feed data into the Splunk. 
 
 ![Lab after Ubuntu & FW](/images/topology2.png)
 
