@@ -46,7 +46,7 @@ I also created two regular users and created organizational unit and a shared fo
 
 Testing access to the shared folder on DC with a regular user
 
-![Testing access to the shared foleder on DC1](/images/testing_access)
+![Testing access to the shared foleder on DC1](/images/testing_access.png)
 
 First GPO I implemented was disabling access to CMD for regular users, since there shouldn't be any need for it in a regular office environment. In the next picture ran a test of GPO, which worked. After testing that I logged on to the domain admin account and tested that CMD was working fine for that user. Another GPO I implemented was disabling installation of software from regular users. This was tested when installing forwarders on the host machines. 
 
