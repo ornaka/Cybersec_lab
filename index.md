@@ -52,7 +52,11 @@ First GPO I implemented was disabling access to CMD for regular users, since the
 
 ![Testing GPO](/images/disabling_cmd_gpo.png)
 
+### Phase 2
 
+After getting the AD environment to a point where I was happy was time to implement pfSense FW and Splunk server to the lab. I decided to run Splunk on an Ubuntu 26.04 machine, which got a static IP address of 192.168.3.30 from DHCP server since I suspected that having a leashed DHCP address would mess up with configuration of Splunk Forwarders on the host machines. The server was also joined into the domain and implementing the changes topology looked like the following image.
+
+![Lab after Ubuntu & FW](/images/topology2.png)
 
 ### Header 3
 
