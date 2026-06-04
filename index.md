@@ -42,7 +42,17 @@ DHCP leases working as expected
 
 ![DHCP-leashes](/images/leases.png)
 
-I also created two regular users and created organizational unit and group policy object for them. One domain-admin was created for administrative tasks that would come later when installing and configuring Splunk forwarders on hosts. 
+I also created two regular users and created organizational unit and a shared folder for the said unit on the DC. Since Group Policy Objects are big part of AD's security features I created and tested couple which were tied to the regular users and their OU. One domain-admin was created for administrative tasks that would come later when installing and configuring Splunk forwarders on hosts. 
+
+Testing access to the shared folder on DC with a regular user
+
+![Testing access to the shared foleder on DC1](/images/testing_access)
+
+First GPO I implemented was disabling access to CMD for regular users, since there shouldn't be any need for it in a regular office environment. In the next picture ran a test of GPO, which worked. After testing that I logged on to the domain admin account and tested that CMD was working fine for that user. Another GPO I implemented was disabling installation of software from regular users. This was tested when installing forwarders on the host machines. 
+
+![Testing GPO](/images/disabling_cmd_gpo.png)
+
+
 
 ### Header 3
 
