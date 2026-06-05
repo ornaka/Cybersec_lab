@@ -64,12 +64,12 @@ Splunk running on the server
 
 ![Splunk](/images/Splunk_works.png)
 
-After the installation of the Splunk, it was time to install forwarders on DC and host machines for log ingestion. I downloaded Sysmon to get Windows security logs on each host and installed forwarders to the machines. For Sysmon configuration file I used ![SwiftOnSecuritys](https://https://github.com/swiftonsecurity/sysmon-config) config file which I had previously stumbled upon while watching Sysmon-related videos on YouTube. This was pretty straight forward process and I got the host logs going to the Splunk Enterprise. 
+After the installation of the Splunk, it was time to install forwarders on DC and host machines for log ingestion. I downloaded Sysmon to get Windows security logs on each host and installed forwarders to the machines. For Sysmon configuration file I used ![SwiftOnSecuritys](https://github.com/swiftonsecurity/sysmon-config) config file which I had previously stumbled upon while watching Sysmon-related videos on YouTube. This was pretty straight forward process and I got the host logs going to the Splunk Enterprise. 
 
 At this point I ran into trouble. While Splunk was getting data from the hosts, all of them were internal logs from Splunk itself, not the security logs I wanted. After some research I found out that I needed to install add-on for Sysmon-logs to flow into the server. I utilized Splunks deployment server-feature to do this and after a while I started seeing security-related logs in Splunk. 
 
 Deployment of Splunk-Sysmon add-on
-![Sysmon_add-on](/images/UF_Agent.png)
+![Sysmon_add-on](/images/UF_agent.png)
 
 As a test I failed login onto one of the host couple times and queried it in Splunk. Event 4625, which stands for failed login was found.
 
