@@ -58,104 +58,22 @@ After getting the AD environment to a point where I was happy was time to implem
 
 ![Lab after Ubuntu & FW](/images/topology2.png)
 
-### Header 3
+At first I ran into a trouble while installing Splunk. At first while installing Splunk I ran into some troubles. The first one being I gave the image too low VDI, which resulted in not being able to download Splunk Enterprise completely. The first installation I did was also done as root, which resulted my domain-admin (who wasn't in the sudoers file at the time) not being able to modify the Splunk files I wanted. Eventually I just reinstalled Splunk properly and all started running as supposed. Splunk had really good documentation about installations and configurations, which I referred to while doing the installations. 
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+Splunk running on the server
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+![Splunk](/images/Splunk_works.png)
 
-#### Header 4
+After the installation of the Splunk, it was time to install forwarders on DC and host machines for log ingestion. I downloaded Sysmon to get Windows security logs on each host and installed forwarders to the machines. For Sysmon configuration file I used ![SwiftOnSecuritys](https://https://github.com/swiftonsecurity/sysmon-config) config file which I had previously stumbled upon while watching Sysmon-related videos on YouTube. This was pretty straight forward process and I got the host logs going to the Splunk Enterprise. 
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+At this point I ran into trouble. While Splunk was getting data from the hosts, all of them were internal logs from Splunk itself, not the security logs I wanted. After some research I found out that I needed to install add-on for Sysmon-logs to flow into the server. I utilized Splunks deployment server-feature to do this and after a while I started seeing security-related logs in Splunk. 
 
-##### Header 5
+Deployment of Splunk-Sysmon add-on
+![Sysmon_add-on](/images/UF_Agent.png)
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+As a test I failed login onto one of the host couple times and queried it in Splunk. Event 4625, which stands for failed login was found.
 
-###### Header 6
+Security events coming in
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+![Event4625](/images/event4625.png)
 
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
