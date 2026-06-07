@@ -60,7 +60,7 @@ After successful installation Splunk was confirmed to be running
 
 ![Splunk](/images/Splunk_works.png)
 
-Sysmon was installed on the domain controller and Windows 11 clients to generate detailed security telemetry. A configuration file based on ![SwiftOnSecurity](https://github.com/swiftonsecurity/sysmon-config) Sysmon template was used to standardize logging across endpoints. Splunk Universal Forwarders were then deployed to each machine to forward logs to the Splunk instance. Initially, only internal Splunk logs were visible, and expected Windows security events were missing. After some research, it was determined that a Splunk Sysmon add-on was required to properly parse and ingest Sysmon telemetry to Splunk.
+Sysmon was installed on the domain controller and Windows 11 clients to generate detailed security telemetry. A configuration file based on [SwiftOnSecurity](https://github.com/swiftonsecurity/sysmon-config) Sysmon template was used to standardize logging across endpoints. Splunk Universal Forwarders were then deployed to each machine to forward logs to the Splunk instance. Initially, only internal Splunk logs were visible, and expected Windows security events were missing. After some research, it was determined that a Splunk Sysmon add-on was required to properly parse and ingest Sysmon telemetry to Splunk.
 
 Using Splunk Deployment Server, the add-on was distributed across all forwarders, after which security event logs became available in Splunk.
 
