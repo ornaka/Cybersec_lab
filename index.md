@@ -4,41 +4,35 @@ layout: default
 
 [Back to main page](https://ornaka.github.io)
 
-# Creating a small homelab environment
+### Overview
 
-This project focuses on building a small cybersecurity homelab to develop and strengthen my practical, hands-on skills. The main focus areas include network configuration and fundamentals, designing and managing an Active Directory environment, and integrating security monitoring and analysis tools such as Splunk within the domain.
+This project focuses on building a small cybersecurity homelab to develop and strengthen hands-on skills in networking, administration and cybersecurity. The main focus areas include Active Directory design and management, network configuration, and security monitoring using Splunk and Sysmon. The goal of the lab was to simulate a small enterprise environment where identity management, endpoint security, and log collection are centrally managed and observable.
 
 ### Used software and hardware specifications
 
-*   Desktop running Windows 10 as OS, 2TB SSD/64GB RAM
+*   Windows 10 desktop with 2TB SSD/64GB RAM as the host machine
 *   GNS3 & Oracle Virtualbox for virtualization
-*   Windows 2022 Server hosting DNS, DHCP and Active Directory
-*   2 x Windows 11 hosts
-*   Ubuntu 26.04 acting as server for SIEM
-*   SPLUNK, Splunk Universal Forwarders and Sysmon for security logs
-*   pfSense
+*   Windows 2022 Server acting as Domain Controller with Active Directory, DNS and DHCP
+*   2 x Windows 11 clients
+*   Ubuntu 26.04 running Splunk enterprise
+*   Splunk Universal Forwarders and Sysmon for endpoint telemetry
+*   pfSense firewall for network routing and internet access
 
-### Approach 
+### Setting up core network services and Active Directory
 
-The project was divided into phases. First phase was getting Windows server with DNS, DHCP and Active Directory up and running and connecting two hosts to the server to ensure that the services running on it are running properly. In the second phase, I added a pfSense firewall to get internet connection to the hosts in the network, added Ubuntu to act as a server for Splunk and configured Splunk forwarders on the Windows hosts to feed data to Splunk. 
-
-### Phase 1 
-
-The network I decided to use for the machines was 192.168.3.0/24. Domain Controller got a static IP address 192.168.3.20 and the two W11 hosts would get their IP's as a DHCP leash. After setting the machines up into the GNS3 the network looked as follows: 
+The lab was built around the 192.168.3.0/24 subnet. A Windows Server 2022 domain controller was configured with a static IP address (192.168.3.20), while Windows 11 clients received network configuration dynamically via DHCP. After deploying the domain controller both client machines were joined to the domain to validate DNS resolution, DHCP leasing, and Active Directory functionality. 
 
 ![Setting up DC and hosts](/images/Topology.png)
 
-Set up the domain controller first and after that joined both hosts to the network to test interconnectivity and local domain working properly. 
-
-Testing connectivity to DC from Host 1 on a local user
+Connectivity was verified by testing domain logins and confirming that client machines could communicate with the domain controller and vice versa.
 
 ![Pinging DC](/images/pings.jpg)
 
-Hosts in Domain Controllers AD's users and computers
+Verifying clients have joined the domain
 
 ![Hosts](/images/computers.png)
 
-DHCP leases working as expected
+Verifying that DHCP leases working as expected
 
 ![DHCP-leashes](/images/leases.png)
 
