@@ -32,7 +32,7 @@ Verifying clients have joined the domain
 
 ![Hosts](/images/computers.png)
 
-Verifying that DHCP leases working as expected
+Verifying that DHCP leases are working as expected
 
 ![DHCP-leashes](/images/leases.png)
 
