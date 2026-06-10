@@ -70,11 +70,11 @@ To validate the logging, multiple failed login attempts were generated on an end
 
 ![Event4625](/images/event4625.png)
 
-To further improve visibility into authentication-related events, a Splunk alert was configured to monitor failed login attempts within the domain environment. For demonstration and validation purposes, the alert threshold was intentionally set to a low value to ensure that alert generation could be tested reliably. Domain controller also had a GPO which would lock the account after five failed login attempts. The action set for this alert was simply triggering an alert just for testing purposes. 
+To further improve visibility into authentication-related events, a Splunk alert was configured to monitor failed login attempts within the domain environment. For demonstration and validation purposes, the alert threshold was intentionally set to a low value to ensure that alert generation could be tested reliably. Domain controller also had a GPO which locks the account after five failed login attempts. The action set for this alert was simply triggering an alert just for testing purposes. 
 
 ![alert](/images/alert.png)
 
-Succesful alert generation was verified  through the Triggered Alerts dashboard. This confirmed that the alert was functioning as expected. 
+Succesful alert generation was verified through the Triggered Alerts dashboard. This confirmed that the alert was functioning as expected. 
 
 ![Alert dashboard](/images/triggered_alerts.png)
 
