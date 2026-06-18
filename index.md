@@ -78,3 +78,6 @@ Succesful alert generation was verified through the Triggered Alerts dashboard. 
 
 ![Alert dashboard](/images/triggered_alerts.png)
 
+To complement the alerting functionality, a basic security monitoring dashboard was created in Splunk to provide centralized visibility into authentication activity across the lab environment. The dashboard includes visualizations for failed login attempts by host, failed login attempts by user account, and successful logins by host. These views make it easier to identify unusual authentication patterns and quickly determine which systems or accounts generate the most security-relevant events.
+
+![Dashboard](/images/dashboard.png)
