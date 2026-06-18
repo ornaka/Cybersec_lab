@@ -84,8 +84,6 @@ To complement the alerting functionality, a basic security monitoring dashboard 
 
 ### Conclusion
 
-Conclusion
-
 The primary objective of this project was to build a small Active Directory lab environment and gain hands-on experience with Windows administration, centralized log collection, and security monitoring. During the project, I deployed and configured Active Directory services, implemented Group Policies, integrated Sysmon for enhanced endpoint visibility, and built a Splunk-based monitoring solution capable of collecting, visualizing, and alerting on security-related events.
 
 While the environment could be expanded further with additional detection use cases and attack simulations, I decided to conclude the project at this stage. My primary goal was to gain more practical experience in deploying and monitoring an Active Directory environment, which was successfully achieved. More advanced detection and incident investigation scenarios are areas I have already explored extensively through platforms such as TryHackMe and Blue Team Labs Online, and I felt that continuing down that path would provide diminishing learning returns compared to starting a new project.
